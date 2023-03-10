@@ -16,6 +16,8 @@ extension ContentView{
         @Published private(set) var locations: [Location]
         @Published var selectedPlace: Location?
         @Published var isUnlocked = false
+        @Published var showAlert = false
+        @Published var alertMessage = ""
         
         let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPlaces")
         
@@ -62,12 +64,18 @@ extension ContentView{
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason){ success, authenticationError in
                     if success{
                         Task{ @MainActor in
-                            self.isUnlocked = true                        }
+                            self.isUnlocked = true
+                        }
                     }else{
-                        
-                    }                }
+                        Task{@MainActor in
+                            self.showAlert = true
+                            self.alertMessage = "Face not recognized for authentication. \(authenticationError?.localizedDescription ?? " ")"
+                        }
+                    }
+                }
             }else{
-                
+                self.showAlert = true
+                self.alertMessage = "FaceID couldn't get started. Try again or contact an Apple service."
             }
         }
     }

@@ -55,15 +55,15 @@ struct ContentView: View {
                             viewModel.addLocation()
                         }label:{
                             Image(systemName: "plus")
+                                .padding()
+                                .background(.black.opacity(0.75))
+                                .foregroundColor(.white)
+                                .font(.headline)
+                                .fontWeight(.bold)
+                                .clipShape(Circle())
+                                .padding([.trailing,.bottom])
                         }
-                        .padding()
-                        .background(.black.opacity(0.75))
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .clipShape(Circle())
-                        .padding([.trailing,.bottom])
-                        
+                        .padding(.trailing)
                     }
                 }
             }
@@ -72,12 +72,18 @@ struct ContentView: View {
                     viewModel.update(location: newLocation)
                 }
             }
+
         }else{
             Button("Unlock"){viewModel.authenticate()}
                 .padding()
                 .background(.blue)
                 .foregroundColor(.white)
                 .clipShape(Capsule())
+                .alert("FaceID Error", isPresented: $viewModel.showAlert){
+                    Button("OK"){}
+                }message: {
+                    Text(viewModel.alertMessage)
+                }
         }
         
     }

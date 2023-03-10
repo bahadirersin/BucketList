@@ -16,6 +16,7 @@
 		3BCB68E129B90F1C008BCC2B /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB68E029B90F1C008BCC2B /* EditView.swift */; };
 		3BCB68E329BA6006008BCC2B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB68E229BA6006008BCC2B /* Result.swift */; };
 		3BCB68E529BA646C008BCC2B /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB68E429BA646C008BCC2B /* ContentView-ViewModel.swift */; };
+		3BCB68E729BB2E34008BCC2B /* EditView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB68E629BB2E34008BCC2B /* EditView-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		3BCB68E029B90F1C008BCC2B /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		3BCB68E229BA6006008BCC2B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		3BCB68E429BA646C008BCC2B /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
+		3BCB68E629BB2E34008BCC2B /* EditView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditView-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 		3BADE70D29B726090040A560 = {
 			isa = PBXGroup;
 			children = (
+				3BCB68E629BB2E34008BCC2B /* EditView-ViewModel.swift */,
 				3BADE71829B726090040A560 /* BucketList */,
 				3BADE71729B726090040A560 /* Products */,
 			);
@@ -157,6 +160,7 @@
 				3BCB68E129B90F1C008BCC2B /* EditView.swift in Sources */,
 				3BADE71A29B726090040A560 /* BucketListApp.swift in Sources */,
 				3BADE72A29B888350040A560 /* Location.swift in Sources */,
+				3BCB68E729BB2E34008BCC2B /* EditView-ViewModel.swift in Sources */,
 				3BCB68E529BA646C008BCC2B /* ContentView-ViewModel.swift in Sources */,
 				3BADE72829B7263A0040A560 /* FileManager-Write.swift in Sources */,
 			);
